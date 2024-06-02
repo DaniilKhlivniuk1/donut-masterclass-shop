@@ -1172,16 +1172,31 @@ html {
 }
 
 .registration {
-  padding: 0px 0px 80px;
-  background-image: url(../../imgs/mobile/backgraund/bg-decor-contact@1x-mobile.webp);
+  padding-top: 8px;
+  padding-bottom: 8px;
   background-size: 308px, 974px;
   background-position-x: center;
   background-position-y: 12px;
   background-repeat: no-repeat;
+  background-image: url(../../imgs/mobile/registration/registration-bg@1x-mobile.webp);
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .registration {
-    background-image: url(../../imgs/mobile/backgraund/bg-decor-contact@2x-mobile.webp);
+    background-image: url(../../imgs/mobile/registration/registration-bg@2x-mobile.webp);
+  }
+}
+@media screen and (min-width: 768px) {
+  .registration {
+    width: 154px;
+    transform: rotate(90deg);
+    left: 50%;
+    top: 55%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .registration {
+    width: 166px;
+    top: 50%;
   }
 }
 .registration__title {
@@ -1193,15 +1208,57 @@ html {
   height: 133px;
 }
 .registration__text {
-  font-size: 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 265px;
   font-weight: 500;
+  line-height: 20px;
+}
+@media screen and (min-width: 768px) {
+  .registration__text {
+    text-align: start;
+    margin-bottom: 0;
+    line-height: 20px;
+    width: 203px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .registration__text {
+    margin-bottom: 28px;
+    width: 238px;
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 .registration__day {
-  font-size: 20px;
-  font-weight: 500;
+  position: relative;
+  width: 114px;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500px;
+  color: #2e2520;
+}
+@media screen and (min-width: 768px) {
+  .registration__day {
+    width: 90px;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1280) {
+  .registration__day {
+    width: 127px;
+  }
+}
+.registration__domain {
+  position: relative;
 }
 .registration__input {
   border: none;
+  width: 100%;
   border-bottom: solid 1px #2E2520;
   outline: none;
 }
@@ -1210,20 +1267,63 @@ html {
   font-size: 16px;
   font-weight: 400;
   background-color: transparent;
-  background-color: #F6F7F7;
 }
 .registration__input::placeholder {
   color: #2E2520;
   font-size: 16px;
   font-weight: 400;
   background-color: transparent;
-  background-color: #F6F7F7;
+}
+@media screen and (min-width: 768px) {
+  .registration__input::-moz-placeholder {
+    margin-bottom: 0;
+  }
+  .registration__input::placeholder {
+    margin-bottom: 0;
+  }
+}
+.registration__form {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 280px;
+  padding: 32px 7px;
+}
+@media screen and (min-width: 768px) {
+  .registration__form {
+    height: 234px;
+    width: 704px;
+    padding: 40px 61px;
+    border-radius: 150px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .registration__form {
+    height: 246px;
+    width: 822px;
+    padding: 40px 105px;
+  }
+}
+.registration__rel {
+  position: relative;
 }
 .registration__ditection {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 22px;
   margin-top: 24px;
+}
+@media screen and (min-width: 768px) {
+  .registration__ditection {
+    gap: 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .registration__ditection {
+    gap: 14px;
+  }
 }
 .registration__button {
   position: absolute;
@@ -1256,11 +1356,11 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 26px 0px 26px 0px;
   background-image: url(../../imgs/mobile/registration/registration-bg@1x-mobile.webp);
   background-repeat: no-repeat;
   background-position: right;
-  background-size: cover;
   border-radius: 10px;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -1273,6 +1373,7 @@ html {
     flex-direction: row;
     align-items: flex-start;
     padding: 40px;
+    gap: 54px;
     background-image: url(../../imgs/tablet/registration/registration-bg@1x-tablet.webp);
   }
 }
@@ -1299,38 +1400,49 @@ html {
 }
 @media screen and (min-width: 736px) {
   .block__text {
-    margin-top: 0;
+    gap: 16px;
   }
 }
 @media screen and (min-width: 1280px) {
   .block__text {
-    padding-left: 40px;
+    margin-left: 64px;
+    margin-right: 24px;
+  }
+}
+.block__button {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
+}
+@media screen and (min-width: 736px) {
+  .block__button {
+    margin-top: 0;
   }
 }
 .block__day {
-  padding-right: 28px;
-  display: flex;
-  align-items: center;
-  padding-top: 57px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 32px;
+  width: 114px;
 }
 .block__img {
   top: 0;
   right: 0;
   z-index: -1;
-  border-radius: 10px;
-  width: 453px;
-  height: 246px;
 }
 @media screen and (min-width: 736px) {
   .block__img {
-    width: 250px;
-    height: auto;
+    width: 100px;
+    height: 66.675px;
+    flex-shrink: 0;
   }
 }
 @media screen and (min-width: 1280px) {
   .block__img {
-    width: 300px;
-    height: auto;
+    width: 200px;
+    height: 133px;
+    flex-shrink: 0;
   }
 }
 
