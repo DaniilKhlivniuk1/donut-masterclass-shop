@@ -85,7 +85,7 @@
         background-size: contain;
       }
         }
-    }
+    } 
     }
 
 
@@ -247,7 +247,7 @@
             outline-color: red;
           }
     
-       input[type="email"]{
+       &__input[type="email"]{
         margin-bottom: 32px;
         @media screen and(min-width:768px){
             margin-bottom: 0;
